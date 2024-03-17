@@ -1,32 +1,23 @@
-import React from "react";
-import './styles/App.css'
-import { applyMiddleware, configureStore } from 'redux'
+import React, { useState } from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
-import { TaskList } from "./components/TaskList";
+import TaskList from './components/TaskList';
 import { TaskForm } from "./components/TaskForm";
 
 function App() {
   return (
-    <div>
-      <Form>
-        <TaskList />
+    <Container>
         <TaskForm />
-      </Form>
-    </div>
+        <TaskList/>
+    </Container>
   );
 }
 
-const Form = styled(motion.div)`
-  border: 2px solid grey;
-  border-radius: 1rem;
-  height: 50rem;
-  width: 40rem;
-  position: absolute;
-  left: 30rem;
-  top: 3rem;
-  overflow: hidden;
-  box-shadow: 5px 5px 1px rgba(0, 0, 0, 0.1);
+const Container = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 `;
 
 export default App;

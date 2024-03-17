@@ -34,12 +34,12 @@ export const TaskForm = () => {
 }
 
 const Input = styled.input `
-    width: 25rem;
+    width: 30rem;
     height: 3rem;
-    position: absolute;
-    top: 9rem;
-    left: 5rem;
     border-radius: 1rem;
+    padding-left: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 20rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border: none;
     outline: none;
@@ -49,9 +49,6 @@ const Input = styled.input `
 const Button = styled.button`
     height: 3rem;
     width: 5rem;
-    position: absolute;
-    right: 4rem;
-    top: 9rem;
     border-radius: 1rem;
     border: none;
     outline: none;
