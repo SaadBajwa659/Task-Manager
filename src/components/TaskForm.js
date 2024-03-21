@@ -18,8 +18,10 @@ export const TaskForm = () => {
 
   return (
     <form style={{ flex: "20%", marginTop: "2rem" }} onSubmit={handleSubmit}>
-      <Input type="text" placeholder="Enter task title" value={taskTitle} onChange={(e) => setTaskTitle(e.target.value)} />
-      <Button type="submit">Add Task</Button>
+      <Form>
+        <Input type="text" placeholder="What would you like to do?" value={taskTitle} onChange={(e) => setTaskTitle(e.target.value)} />
+        <Button type="submit">Add</Button>
+      </Form>
     </form>
   );
 };
@@ -27,22 +29,37 @@ export const TaskForm = () => {
 const Input = styled.input`
   width: 30rem;
   height: 3rem;
-  border-radius: 1rem;
-  padding-left: 1rem;
-  margin-right: 1rem;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border: none;
+  border-bottom: 4px solid #ccc;
+  padding-left: 1rem;
+  margin-bottom: 1rem;
   outline: none;
   font-size: 1rem;
 `;
 
 const Button = styled.button`
   height: 3rem;
-  width: 5rem;
-  border-radius: 1rem;
+  width: 15rem;
+  font-size: 2rem;
+  border-radius: 0.5rem;
   border: none;
   outline: none;
   cursor: pointer;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px rgb(238, 105, 88);
   transition: all 0.3s ease;
+  background-color: rgb(238, 105, 88);
+  color: white;
 `;
+
+const Form = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: -15vh;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 0 10px #ccc;
+  height: 25vh;
+  width: 90vh;
+  border-radius: 1rem;
+`

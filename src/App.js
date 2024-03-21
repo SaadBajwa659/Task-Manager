@@ -6,6 +6,9 @@ import { TaskForm } from "./components/TaskForm";
 function App() {
   return (
     <Container>
+      <TitleBar>
+        <Title>Task Manager</Title>
+      </TitleBar>
       <TaskForm />
       <TaskList />
     </Container>
@@ -17,7 +20,32 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  width: 105vh;
+  position: relative;
+  left: 42vh;
+  border: 1px solid #ccc;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 0 10px #ccc;
 `;
+
+const Title = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  color: white;
+  font-family: sans-serif;
+  font-weight: lighter;
+`
+
+const TitleBar = styled.div`
+  background-image: linear-gradient( to right , rgb(95, 69, 134), rgb(82, 98, 149) );
+  height: 20vh;
+  width: 60rem;
+  border-radius: 1rem 1rem 0 0;
+  box-shadow: 0 0 10px #ccc;
+`
 
 export default App;
