@@ -21,12 +21,12 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   width: 105vh;
-  position: relative;
-  left: 42vh;
   border: 1px solid #ccc;
   border-radius: 1rem;
   overflow: hidden;
   box-shadow: 0 0 10px #ccc;
+  margin-left: auto;
+  margin-right: auto;
 `;
 
 const Title = styled.div`
@@ -43,7 +43,7 @@ const Title = styled.div`
 const TitleBar = styled.div`
   background-image: linear-gradient( to right , rgb(95, 69, 134), rgb(82, 98, 149) );
   height: 20vh;
-  width: 60rem;
+  width: 100%;
   border-radius: 1rem 1rem 0 0;
   box-shadow: 0 0 10px #ccc;
 `
